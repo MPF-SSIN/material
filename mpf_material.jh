@@ -1,0 +1,154 @@
+/**
+ * Pessoa entity.
+ * @author Leandro Iglezias.
+ */
+entity Pessoa{
+	nome String required
+    cpf String 
+    dataNascimento LocalDate 
+    matricula String
+    tipoVinculo TipoVinculo required
+    foto ImageBlob
+}
+
+/**
+ * TipoVinculo Enum
+ */
+ enum TipoVinculo{
+ 	MEMBRO,
+ 	SERVIDOR,
+ 	ESTAGIARIO,
+ 	OUTROS
+ }
+ 
+ /**
+ * SituacaoMaterial Enum
+ */
+ enum SituacaoMaterial{
+ 	CADASTRADO,
+ 	DISPONIVEL,
+ 	ACAUTELADO,
+ 	MANUTENCAO,
+    INUTILIZADO
+ }
+ 
+ 
+ /**
+ * Lotacao entity.
+ * @author Leandro Iglezias.
+ */
+ entity Lotacao{
+ 	nome String
+ 	sigla String
+ 	latitude Double
+ 	longitude Double
+ 	propria Boolean /** Alugada ou própria */
+ }
+ 
+ /**
+ * Tipo Material entity
+ * @author Leandro Iglezias.
+ * Arma/Munição/Colete Balístico/Equipamento/Vestuário
+ */
+ entity TipoMaterial{
+ 	nome String
+ }
+ 
+   /**
+ * TipoArma entity
+ * @author Leandro Iglezias.
+ * Pistola/Fuzil/Submetralhadora
+ * Espingarda/Choque/
+ */
+ entity TipoArma{
+ 	nome String required
+ }
+ 
+    /**
+ * Calibre entity
+ * @author Leandro Iglezias.
+ * .380/9mm Lugar/.40 Auto/5.56 NATO/12 Gauge
+ */
+ entity Calibre{
+ 	nome String required
+ }
+ 
+ /**
+ * Fornecedor entity
+ * @author Leandro Iglezias.
+ * GLOCK/CBC/TAURUS/ETC
+ */
+ entity Fornecedor{
+ 	nome String required
+    cnpj String pattern (/[0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2}/)
+ }
+ 
+ /**
+ * Material entity
+ * @author Leandro Iglezias.
+ */
+ entity Material{
+ 	nome String required
+    descricao String required
+    marca String required
+    valor Double required
+    situacao SituacaoMaterial 
+    //Arma
+        serie String
+    //Municao
+    	lote String
+    //Vestuario
+    	tamanho String
+ }
+ 
+  /**
+ * Craf entity
+ * @author Leandro Iglezias.
+ */
+ entity Craf{
+ 	numero String required
+    dataEmissao LocalDate required
+    dataValidade LocalDate required
+ }
+ 
+  /**
+ * Acautelamento entity
+ * @author Leandro Iglezias.
+ */
+ entity Acautelamento{
+ 	numero String required
+    dataHora Instant required
+    dataHoraDevolucao Instant
+    obs String
+ }
+ 
+ /**
+ * ItemAcautelamento entity
+ * @author Leandro Iglezias.
+ */
+ entity ItemAcautelamento{
+ 	quantidade Integer required
+    valorUnitario Double required
+ }
+ 
+ /**
+  * relationship ManyToOne
+  */
+  relationship ManyToOne{
+  	Pessoa {lotacao} to Lotacao
+    Material {tipoMaterial} to TipoMaterial
+    Material {tipoArma} to TipoArma
+    Material {calibre} to Calibre
+    Acautelamento {acautelante} to Pessoa
+    Material {fornecedor} to Fornecedor
+  }
+
+  relationship OneToOne{
+  	Craf {arma} to Material
+    ItemAcautelamento {item} to Material  
+  }
+  
+  relationship OneToMany {
+  	Acautelamento {itens} to ItemAcautelamento {acautelamento}
+  }
+  
