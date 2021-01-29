@@ -1,0 +1,22 @@
+{
+  "ssinApp": {
+    "tipoArma": {
+      "home": {
+        "title": "Tipo Armas",
+        "createLabel": "Criar novo Tipo Arma",
+        "createOrEditLabel": "Criar ou editar Tipo Arma",
+        "notFound": "Nenhum Tipo Arma encontrado"
+      },
+      "created": "Um novo Tipo Arma foi criado com o identificador {{ param }}",
+      "updated": "Um Tipo Arma foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Tipo Arma foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Tipo Arma {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Arma"
+      },
+      "nome": "Nome"
+    }
+  }
+}

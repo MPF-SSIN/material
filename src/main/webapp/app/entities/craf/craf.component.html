@@ -1,0 +1,71 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="ssinApp.craf.home.title">Crafs</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-craf" [routerLink]="['/craf/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="ssinApp.craf.home.createLabel">
+            Create a new Craf
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="crafs?.length === 0">
+        <span jhiTranslate="ssinApp.craf.home.notFound">No crafs found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="crafs && crafs.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.craf.numero">Numero</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.craf.dataEmissao">Data Emissao</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.craf.dataValidade">Data Validade</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.craf.arma">Arma</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let craf of crafs ;trackBy: trackId">
+                    <td><a [routerLink]="['/craf', craf.id, 'view']">{{ craf.id }}</a></td>
+                    <td>{{ craf.numero }}</td>
+                    <td>{{ craf.dataEmissao | date:'mediumDate' }}</td>
+                    <td>{{ craf.dataValidade | date:'mediumDate' }}</td>
+                    <td>
+                        <div *ngIf="craf.arma">
+                            <a [routerLink]="['/material', craf.arma?.id, 'view']" >{{ craf.arma?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/craf', craf.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/craf', craf.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(craf)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "TipoMaterial",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210129042032",
+  "javadoc": "Tipo Material entity\\n@author Leandro Iglezias.\\nArma/Munição/Colete Balístico/Equipamento/Vestuário",
+  "entityTableName": "tipo_material",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

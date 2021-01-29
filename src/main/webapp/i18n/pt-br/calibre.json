@@ -1,0 +1,22 @@
+{
+  "ssinApp": {
+    "calibre": {
+      "home": {
+        "title": "Calibres",
+        "createLabel": "Criar novo Calibre",
+        "createOrEditLabel": "Criar ou editar Calibre",
+        "notFound": "Nenhum Calibre encontrado"
+      },
+      "created": "Um novo Calibre foi criado com o identificador {{ param }}",
+      "updated": "Um Calibre foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Calibre foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Calibre {{ id }}?"
+      },
+      "detail": {
+        "title": "Calibre"
+      },
+      "nome": "Nome"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+export const enum SituacaoMaterial {
+  CADASTRADO = 'CADASTRADO',
+
+  DISPONIVEL = 'DISPONIVEL',
+
+  ACAUTELADO = 'ACAUTELADO',
+
+  MANUTENCAO = 'MANUTENCAO',
+
+  INUTILIZADO = 'INUTILIZADO',
+}

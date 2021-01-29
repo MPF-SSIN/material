@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Material.
+    -->
+    <changeSet id="20210129042432-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tipo_material_id"
+                                 baseTableName="material"
+                                 constraintName="fk_material_tipo_material_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_material"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_arma_id"
+                                 baseTableName="material"
+                                 constraintName="fk_material_tipo_arma_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_arma"/>
+
+        <addForeignKeyConstraint baseColumnNames="calibre_id"
+                                 baseTableName="material"
+                                 constraintName="fk_material_calibre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="calibre"/>
+
+        <addForeignKeyConstraint baseColumnNames="fornecedor_id"
+                                 baseTableName="material"
+                                 constraintName="fk_material_fornecedor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fornecedor"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -47,6 +47,17 @@ public class CacheConfiguration {
             createCache(cm, br.mp.mpf.ssin.domain.User.class.getName());
             createCache(cm, br.mp.mpf.ssin.domain.Authority.class.getName());
             createCache(cm, br.mp.mpf.ssin.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.mp.mpf.ssin.domain.Pessoa.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Lotacao.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.TipoMaterial.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.TipoArma.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Calibre.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Fornecedor.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Material.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Craf.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Acautelamento.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Acautelamento.class.getName() + ".itens");
+            createCache(cm, br.mp.mpf.ssin.domain.ItemAcautelamento.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

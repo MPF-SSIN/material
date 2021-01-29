@@ -1,0 +1,11 @@
+{
+  "ssinApp": {
+    "TipoVinculo": {
+      "null": "",
+      "MEMBRO": "MEMBRO",
+      "SERVIDOR": "SERVIDOR",
+      "ESTAGIARIO": "ESTAGIARIO",
+      "OUTROS": "OUTROS"
+    }
+  }
+}

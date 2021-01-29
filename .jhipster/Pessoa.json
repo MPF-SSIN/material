@@ -1,0 +1,58 @@
+{
+  "name": "Pessoa",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "cpf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataNascimento",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "matricula",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tipoVinculo",
+      "fieldType": "TipoVinculo",
+      "fieldValues": "MEMBRO,SERVIDOR,ESTAGIARIO,OUTROS",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "foto",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lotacao",
+      "otherEntityRelationshipName": "pessoa",
+      "relationshipName": "lotacao",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210129041832",
+  "javadoc": "Pessoa entity.\\n@author Leandro Iglezias.",
+  "entityTableName": "pessoa",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

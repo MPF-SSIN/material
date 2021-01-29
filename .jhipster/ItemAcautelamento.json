@@ -1,0 +1,48 @@
+{
+  "name": "ItemAcautelamento",
+  "fields": [
+    {
+      "fieldName": "quantidade",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "valorUnitario",
+      "fieldType": "Double",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "material",
+      "otherEntityRelationshipName": "itemAcautelamento",
+      "relationshipName": "item",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "acautelamento",
+      "otherEntityRelationshipName": "itens",
+      "relationshipName": "acautelamento",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210129042732",
+  "javadoc": "ItemAcautelamento entity\\n@author Leandro Iglezias.",
+  "entityTableName": "item_acautelamento",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

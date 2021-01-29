@@ -1,0 +1,54 @@
+{
+  "name": "Acautelamento",
+  "fields": [
+    {
+      "fieldName": "numero",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dataHora",
+      "fieldType": "Instant",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dataHoraDevolucao",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "obs",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "itemAcautelamento",
+      "otherEntityRelationshipName": "acautelamento",
+      "relationshipName": "itens"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "pessoa",
+      "otherEntityRelationshipName": "acautelamento",
+      "relationshipName": "acautelante",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210129042632",
+  "javadoc": "Acautelamento entity\\n@author Leandro Iglezias.",
+  "entityTableName": "acautelamento",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

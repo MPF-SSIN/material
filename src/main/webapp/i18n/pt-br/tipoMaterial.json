@@ -1,0 +1,22 @@
+{
+  "ssinApp": {
+    "tipoMaterial": {
+      "home": {
+        "title": "Tipo Materials",
+        "createLabel": "Criar novo Tipo Material",
+        "createOrEditLabel": "Criar ou editar Tipo Material",
+        "notFound": "Nenhum Tipo Material encontrado"
+      },
+      "created": "Um novo Tipo Material foi criado com o identificador {{ param }}",
+      "updated": "Um Tipo Material foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Tipo Material foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Tipo Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Material"
+      },
+      "nome": "Nome"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ssinApp": {
+    "craf": {
+      "home": {
+        "title": "Crafs",
+        "createLabel": "Criar novo Craf",
+        "createOrEditLabel": "Criar ou editar Craf",
+        "notFound": "Nenhum Craf encontrado"
+      },
+      "created": "Um novo Craf foi criado com o identificador {{ param }}",
+      "updated": "Um Craf foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Craf foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Craf {{ id }}?"
+      },
+      "detail": {
+        "title": "Craf"
+      },
+      "numero": "Numero",
+      "dataEmissao": "Data Emissao",
+      "dataValidade": "Data Validade",
+      "arma": "Arma"
+    }
+  }
+}

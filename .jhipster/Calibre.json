@@ -1,0 +1,25 @@
+{
+  "name": "Calibre",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210129042232",
+  "javadoc": "Calibre entity\\n@author Leandro Iglezias.\\n.380/9mm Lugar/.40 Auto/5.56 NATO/12 Gauge",
+  "entityTableName": "calibre",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

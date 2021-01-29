@@ -7,6 +7,16 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "pessoa": "Pessoa",
+        "lotacao": "Lotacao",
+        "tipoMaterial": "Tipo Material",
+        "tipoArma": "Tipo Arma",
+        "calibre": "Calibre",
+        "fornecedor": "Fornecedor",
+        "material": "Material",
+        "craf": "Craf",
+        "acautelamento": "Acautelamento",
+        "itemAcautelamento": "Item Acautelamento",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

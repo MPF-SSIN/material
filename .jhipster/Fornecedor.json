@@ -1,0 +1,33 @@
+{
+  "name": "Fornecedor",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "cnpj",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "pattern"
+      ],
+      "fieldValidateRulesPattern": "[0-9]{2}[\\.]?[0-9]{3}[\\.]?[0-9]{3}[\\/]?[0-9]{4}[-]?[0-9]{2}"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210129042332",
+  "javadoc": "Fornecedor entity\\n@author Leandro Iglezias.\\nGLOCK/CBC/TAURUS/ETC",
+  "entityTableName": "fornecedor",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
