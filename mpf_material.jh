@@ -149,6 +149,6 @@ entity Pessoa{
   }
   
   relationship OneToMany {
-  	Acautelamento {itens} to ItemAcautelamento {acautelamento}
+  	Acautelamento {itens} to ItemAcautelamento
   }
   
