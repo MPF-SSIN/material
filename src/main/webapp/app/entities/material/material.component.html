@@ -1,0 +1,99 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="ssinApp.material.home.title">Materials</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-material" [routerLink]="['/material/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="ssinApp.material.home.createLabel">
+            Create a new Material
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="materials?.length === 0">
+        <span jhiTranslate="ssinApp.material.home.notFound">No materials found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="materials && materials.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.nome">Nome</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.descricao">Descricao</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.marca">Marca</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.valor">Valor</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.situacao">Situacao</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.serie">Serie</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.lote">Lote</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.tamanho">Tamanho</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.tipoMaterial">Tipo Material</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.tipoArma">Tipo Arma</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.calibre">Calibre</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.material.fornecedor">Fornecedor</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let material of materials ;trackBy: trackId">
+                    <td><a [routerLink]="['/material', material.id, 'view']">{{ material.id }}</a></td>
+                    <td>{{ material.nome }}</td>
+                    <td>{{ material.descricao }}</td>
+                    <td>{{ material.marca }}</td>
+                    <td>{{ material.valor }}</td>
+                    <td jhiTranslate="{{ 'ssinApp.SituacaoMaterial.' + material.situacao }}">{{ material.situacao }}</td>
+                    <td>{{ material.serie }}</td>
+                    <td>{{ material.lote }}</td>
+                    <td>{{ material.tamanho }}</td>
+                    <td>
+                        <div *ngIf="material.tipoMaterial">
+                            <a [routerLink]="['/tipo-material', material.tipoMaterial?.id, 'view']" >{{ material.tipoMaterial?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="material.tipoArma">
+                            <a [routerLink]="['/tipo-arma', material.tipoArma?.id, 'view']" >{{ material.tipoArma?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="material.calibre">
+                            <a [routerLink]="['/calibre', material.calibre?.id, 'view']" >{{ material.calibre?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="material.fornecedor">
+                            <a [routerLink]="['/fornecedor', material.fornecedor?.id, 'view']" >{{ material.fornecedor?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/material', material.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/material', material.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(material)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

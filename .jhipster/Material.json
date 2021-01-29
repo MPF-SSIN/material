@@ -1,0 +1,92 @@
+{
+  "name": "Material",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "marca",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "Double",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "situacao",
+      "fieldType": "SituacaoMaterial",
+      "fieldValues": "CADASTRADO,DISPONIVEL,ACAUTELADO,MANUTENCAO,INUTILIZADO"
+    },
+    {
+      "fieldName": "serie",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lote",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tamanho",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoMaterial",
+      "otherEntityRelationshipName": "material",
+      "relationshipName": "tipoMaterial",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoArma",
+      "otherEntityRelationshipName": "material",
+      "relationshipName": "tipoArma",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "calibre",
+      "otherEntityRelationshipName": "material",
+      "relationshipName": "calibre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fornecedor",
+      "otherEntityRelationshipName": "material",
+      "relationshipName": "fornecedor",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210129042432",
+  "javadoc": "Material entity\\n@author Leandro Iglezias.",
+  "entityTableName": "material",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

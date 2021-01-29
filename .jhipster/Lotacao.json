@@ -1,0 +1,39 @@
+{
+  "name": "Lotacao",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sigla",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "propria",
+      "fieldType": "Boolean",
+      "javadoc": "Alugada ou própria"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210129041932",
+  "javadoc": "Lotacao entity.\\n@author Leandro Iglezias.",
+  "entityTableName": "lotacao",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

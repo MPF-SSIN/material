@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="craf">
+            <h2><span jhiTranslate="ssinApp.craf.detail.title">Craf</span> {{ craf.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ssinApp.craf.numero">Numero</span></dt>
+                <dd>
+                    <span>{{ craf.numero }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.craf.dataEmissao">Data Emissao</span></dt>
+                <dd>
+                    <span>{{ craf.dataEmissao }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.craf.dataValidade">Data Validade</span></dt>
+                <dd>
+                    <span>{{ craf.dataValidade }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.craf.arma">Arma</span></dt>
+                <dd>
+                    <div *ngIf="craf.arma">
+                        <a [routerLink]="['/material', craf.arma?.id, 'view']">{{ craf.arma?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/craf', craf.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

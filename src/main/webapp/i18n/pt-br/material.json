@@ -1,0 +1,33 @@
+{
+  "ssinApp": {
+    "material": {
+      "home": {
+        "title": "Materials",
+        "createLabel": "Criar novo Material",
+        "createOrEditLabel": "Criar ou editar Material",
+        "notFound": "Nenhum Material encontrado"
+      },
+      "created": "Um novo Material foi criado com o identificador {{ param }}",
+      "updated": "Um Material foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Material foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Material"
+      },
+      "nome": "Nome",
+      "descricao": "Descricao",
+      "marca": "Marca",
+      "valor": "Valor",
+      "situacao": "Situacao",
+      "serie": "Serie",
+      "lote": "Lote",
+      "tamanho": "Tamanho",
+      "tipoMaterial": "Tipo Material",
+      "tipoArma": "Tipo Arma",
+      "calibre": "Calibre",
+      "fornecedor": "Fornecedor"
+    }
+  }
+}

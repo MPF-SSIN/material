@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-item-acautelamento-heading" jhiTranslate="ssinApp.itemAcautelamento.home.createOrEditLabel">Create or edit a Item Acautelamento</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ssinApp.itemAcautelamento.quantidade" for="field_quantidade">Quantidade</label>
+                    <input type="number" class="form-control" name="quantidade" id="field_quantidade"
+                           formControlName="quantidade"/>
+                    <div *ngIf="editForm.get('quantidade')!.invalid && (editForm.get('quantidade')!.dirty || editForm.get('quantidade')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('quantidade')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('quantidade')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ssinApp.itemAcautelamento.valorUnitario" for="field_valorUnitario">Valor Unitario</label>
+                    <input type="number" class="form-control" name="valorUnitario" id="field_valorUnitario"
+                           formControlName="valorUnitario"/>
+                    <div *ngIf="editForm.get('valorUnitario')!.invalid && (editForm.get('valorUnitario')!.dirty || editForm.get('valorUnitario')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('valorUnitario')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('valorUnitario')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ssinApp.itemAcautelamento.item" for="field_item">Item</label>
+                    <select class="form-control" id="field_item" name="item" formControlName="item">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="materialOption.id === editForm.get('item')!.value?.id ? editForm.get('item')!.value : materialOption" *ngFor="let materialOption of items; trackBy: trackById">{{ materialOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ssinApp.itemAcautelamento.acautelamento" for="field_acautelamento">Acautelamento</label>
+                    <select class="form-control" id="field_acautelamento" name="acautelamento" formControlName="acautelamento">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="acautelamentoOption.id === editForm.get('acautelamento')!.value?.id ? editForm.get('acautelamento')!.value : acautelamentoOption" *ngFor="let acautelamentoOption of acautelamentos; trackBy: trackById">{{ acautelamentoOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

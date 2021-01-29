@@ -1,0 +1,25 @@
+{
+  "name": "TipoArma",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210129042132",
+  "javadoc": "TipoArma entity\\n@author Leandro Iglezias.\\nPistola/Fuzil/Submetralhadora\\nEspingarda/Choque/",
+  "entityTableName": "tipo_arma",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

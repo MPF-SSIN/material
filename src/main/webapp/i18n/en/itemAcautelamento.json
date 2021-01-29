@@ -1,0 +1,25 @@
+{
+  "ssinApp": {
+    "itemAcautelamento": {
+      "home": {
+        "title": "Item Acautelamentos",
+        "createLabel": "Create a new Item Acautelamento",
+        "createOrEditLabel": "Create or edit a Item Acautelamento",
+        "notFound": "No Item Acautelamentos found"
+      },
+      "created": "A new Item Acautelamento is created with identifier {{ param }}",
+      "updated": "A Item Acautelamento is updated with identifier {{ param }}",
+      "deleted": "A Item Acautelamento is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Item Acautelamento {{ id }}?"
+      },
+      "detail": {
+        "title": "Item Acautelamento"
+      },
+      "quantidade": "Quantidade",
+      "valorUnitario": "Valor Unitario",
+      "item": "Item",
+      "acautelamento": "Acautelamento"
+    }
+  }
+}

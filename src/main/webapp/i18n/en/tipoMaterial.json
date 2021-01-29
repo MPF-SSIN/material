@@ -1,0 +1,22 @@
+{
+  "ssinApp": {
+    "tipoMaterial": {
+      "home": {
+        "title": "Tipo Materials",
+        "createLabel": "Create a new Tipo Material",
+        "createOrEditLabel": "Create or edit a Tipo Material",
+        "notFound": "No Tipo Materials found"
+      },
+      "created": "A new Tipo Material is created with identifier {{ param }}",
+      "updated": "A Tipo Material is updated with identifier {{ param }}",
+      "deleted": "A Tipo Material is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tipo Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Material"
+      },
+      "nome": "Nome"
+    }
+  }
+}

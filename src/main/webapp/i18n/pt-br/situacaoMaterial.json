@@ -1,0 +1,12 @@
+{
+  "ssinApp": {
+    "SituacaoMaterial": {
+      "null": "",
+      "CADASTRADO": "CADASTRADO",
+      "DISPONIVEL": "DISPONIVEL",
+      "ACAUTELADO": "ACAUTELADO",
+      "MANUTENCAO": "MANUTENCAO",
+      "INUTILIZADO": "INUTILIZADO"
+    }
+  }
+}

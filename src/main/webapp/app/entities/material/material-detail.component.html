@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="material">
+            <h2><span jhiTranslate="ssinApp.material.detail.title">Material</span> {{ material.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ssinApp.material.nome">Nome</span></dt>
+                <dd>
+                    <span>{{ material.nome }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.descricao">Descricao</span></dt>
+                <dd>
+                    <span>{{ material.descricao }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.marca">Marca</span></dt>
+                <dd>
+                    <span>{{ material.marca }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.valor">Valor</span></dt>
+                <dd>
+                    <span>{{ material.valor }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.situacao">Situacao</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'ssinApp.SituacaoMaterial.' + material.situacao }}">{{ material.situacao }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.serie">Serie</span></dt>
+                <dd>
+                    <span>{{ material.serie }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.lote">Lote</span></dt>
+                <dd>
+                    <span>{{ material.lote }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.tamanho">Tamanho</span></dt>
+                <dd>
+                    <span>{{ material.tamanho }}</span>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.tipoMaterial">Tipo Material</span></dt>
+                <dd>
+                    <div *ngIf="material.tipoMaterial">
+                        <a [routerLink]="['/tipo-material', material.tipoMaterial?.id, 'view']">{{ material.tipoMaterial?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.tipoArma">Tipo Arma</span></dt>
+                <dd>
+                    <div *ngIf="material.tipoArma">
+                        <a [routerLink]="['/tipo-arma', material.tipoArma?.id, 'view']">{{ material.tipoArma?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.calibre">Calibre</span></dt>
+                <dd>
+                    <div *ngIf="material.calibre">
+                        <a [routerLink]="['/calibre', material.calibre?.id, 'view']">{{ material.calibre?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="ssinApp.material.fornecedor">Fornecedor</span></dt>
+                <dd>
+                    <div *ngIf="material.fornecedor">
+                        <a [routerLink]="['/fornecedor', material.fornecedor?.id, 'view']">{{ material.fornecedor?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/material', material.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
