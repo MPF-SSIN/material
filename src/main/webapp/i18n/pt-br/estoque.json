@@ -1,0 +1,24 @@
+{
+  "ssinApp": {
+    "estoque": {
+      "home": {
+        "title": "Estoques",
+        "createLabel": "Criar novo Estoque",
+        "createOrEditLabel": "Criar ou editar Estoque",
+        "notFound": "Nenhum Estoque encontrado"
+      },
+      "created": "Um novo Estoque foi criado com o identificador {{ param }}",
+      "updated": "Um Estoque foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Estoque foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Estoque {{ id }}?"
+      },
+      "detail": {
+        "title": "Estoque"
+      },
+      "quantidade": "Quantidade",
+      "localizacao": "Localizacao",
+      "material": "Material"
+    }
+  }
+}

@@ -44,6 +44,10 @@ import { RouterModule } from '@angular/router';
         path: 'item-acautelamento',
         loadChildren: () => import('./item-acautelamento/item-acautelamento.module').then(m => m.SsinItemAcautelamentoModule),
       },
+      {
+        path: 'estoque',
+        loadChildren: () => import('./estoque/estoque.module').then(m => m.SsinEstoqueModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

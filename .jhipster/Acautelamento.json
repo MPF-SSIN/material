@@ -5,7 +5,8 @@
       "fieldName": "numero",
       "fieldType": "String",
       "fieldValidateRules": [
-        "required"
+        "required",
+        "unique"
       ]
     },
     {

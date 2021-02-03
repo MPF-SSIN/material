@@ -116,7 +116,7 @@ entity Pessoa{
  * @author Leandro Iglezias.
  */
  entity Acautelamento{
- 	numero String required
+ 	numero String required unique
     dataHora Instant required
     dataHoraDevolucao Instant
     obs String
@@ -130,6 +130,16 @@ entity Pessoa{
  	quantidade Integer required
     valorUnitario Double required
  }
+ 
+  /**
+ * Estoque entity
+ * @author Leandro Iglezias.
+ */
+ entity Estoque{
+ 	quantidade Integer required
+    localizacao String required
+ }
+
  
  /**
   * relationship ManyToOne
@@ -145,10 +155,11 @@ entity Pessoa{
 
   relationship OneToOne{
   	Craf {arma} to Material
-    ItemAcautelamento {item} to Material  
+    ItemAcautelamento {item} to Material 
+    Estoque {material} to Material
   }
   
   relationship OneToMany {
-  	Acautelamento {itens} to ItemAcautelamento
+  	Acautelamento {itens} to ItemAcautelamento {acautelamento}
   }
   

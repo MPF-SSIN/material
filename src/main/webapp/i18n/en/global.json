@@ -17,6 +17,7 @@
         "craf": "Craf",
         "acautelamento": "Acautelamento",
         "itemAcautelamento": "Item Acautelamento",
+        "estoque": "Estoque",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

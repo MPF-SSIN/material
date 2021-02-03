@@ -30,7 +30,7 @@ public class Acautelamento implements Serializable {
     private Long id;
 
     @NotNull
-    @Column(name = "numero", nullable = false)
+    @Column(name = "numero", nullable = false, unique = true)
     private String numero;
 
     @NotNull
