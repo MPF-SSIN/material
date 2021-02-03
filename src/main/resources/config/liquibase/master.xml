@@ -24,12 +24,14 @@
     <include file="config/liquibase/changelog/20210129042532_added_entity_Craf.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210129042632_added_entity_Acautelamento.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210129042732_added_entity_ItemAcautelamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210203035053_added_entity_Estoque.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20210129041832_added_entity_constraints_Pessoa.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210129042432_added_entity_constraints_Material.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210129042532_added_entity_constraints_Craf.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210129042632_added_entity_constraints_Acautelamento.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210129042732_added_entity_constraints_ItemAcautelamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210203035053_added_entity_constraints_Estoque.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

@@ -58,6 +58,7 @@ public class CacheConfiguration {
             createCache(cm, br.mp.mpf.ssin.domain.Acautelamento.class.getName());
             createCache(cm, br.mp.mpf.ssin.domain.Acautelamento.class.getName() + ".itens");
             createCache(cm, br.mp.mpf.ssin.domain.ItemAcautelamento.class.getName());
+            createCache(cm, br.mp.mpf.ssin.domain.Estoque.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
