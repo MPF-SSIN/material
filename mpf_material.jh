@@ -155,7 +155,7 @@ entity Pessoa{
 
   relationship OneToOne{
   	Craf {arma} to Material
-    ItemAcautelamento {item} to Material 
+    ItemAcautelamento {material} to Material 
     Estoque {material} to Material
   }
   
