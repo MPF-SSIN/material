@@ -21,8 +21,8 @@
             <column name="valor_unitario" type="double">
                 <constraints nullable="false" />
             </column>
-            <column name="item_id" type="bigint">
-                <constraints unique="true" nullable="true" uniqueConstraintName="ux_item_acautelamento_item_id" />
+            <column name="material_id" type="bigint">
+                <constraints unique="true" nullable="true" uniqueConstraintName="ux_item_acautelamento_material_id" />
             </column>
             <column name="acautelamento_id" type="bigint">
                 <constraints nullable="true" />

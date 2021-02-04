@@ -36,7 +36,7 @@ public class ItemAcautelamento implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private Material item;
+    private Material material;
 
     @ManyToOne
     @JsonIgnoreProperties(value = "itens", allowSetters = true)
@@ -77,17 +77,17 @@ public class ItemAcautelamento implements Serializable {
         this.valorUnitario = valorUnitario;
     }
 
-    public Material getItem() {
-        return item;
+    public Material getMaterial() {
+        return material;
     }
 
-    public ItemAcautelamento item(Material material) {
-        this.item = material;
+    public ItemAcautelamento material(Material material) {
+        this.material = material;
         return this;
     }
 
-    public void setItem(Material material) {
-        this.item = material;
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
     public Acautelamento getAcautelamento() {

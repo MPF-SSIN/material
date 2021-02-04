@@ -25,7 +25,7 @@
                     <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
                     <th scope="col" ><span jhiTranslate="ssinApp.itemAcautelamento.quantidade">Quantidade</span></th>
                     <th scope="col" ><span jhiTranslate="ssinApp.itemAcautelamento.valorUnitario">Valor Unitario</span></th>
-                    <th scope="col" ><span jhiTranslate="ssinApp.itemAcautelamento.item">Item</span></th>
+                    <th scope="col" ><span jhiTranslate="ssinApp.itemAcautelamento.material">Material</span></th>
                     <th scope="col" ><span jhiTranslate="ssinApp.itemAcautelamento.acautelamento">Acautelamento</span></th>
                     <th scope="col"></th>
                 </tr>
@@ -36,8 +36,8 @@
                     <td>{{ itemAcautelamento.quantidade }}</td>
                     <td>{{ itemAcautelamento.valorUnitario }}</td>
                     <td>
-                        <div *ngIf="itemAcautelamento.item">
-                            <a [routerLink]="['/material', itemAcautelamento.item?.id, 'view']" >{{ itemAcautelamento.item?.id }}</a>
+                        <div *ngIf="itemAcautelamento.material">
+                            <a [routerLink]="['/material', itemAcautelamento.material?.id, 'view']" >{{ itemAcautelamento.material?.id }}</a>
                         </div>
                     </td>
                     <td>

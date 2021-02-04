@@ -50,7 +50,7 @@ describe('ItemAcautelamento e2e test', () => {
     await promise.all([
       itemAcautelamentoUpdatePage.setQuantidadeInput('5'),
       itemAcautelamentoUpdatePage.setValorUnitarioInput('5'),
-      itemAcautelamentoUpdatePage.itemSelectLastOption(),
+      itemAcautelamentoUpdatePage.materialSelectLastOption(),
       itemAcautelamentoUpdatePage.acautelamentoSelectLastOption(),
     ]);
 
