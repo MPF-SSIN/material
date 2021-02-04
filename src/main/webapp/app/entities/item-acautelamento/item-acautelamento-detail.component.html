@@ -16,10 +16,10 @@
                 <dd>
                     <span>{{ itemAcautelamento.valorUnitario }}</span>
                 </dd>
-                <dt><span jhiTranslate="ssinApp.itemAcautelamento.item">Item</span></dt>
+                <dt><span jhiTranslate="ssinApp.itemAcautelamento.material">Material</span></dt>
                 <dd>
-                    <div *ngIf="itemAcautelamento.item">
-                        <a [routerLink]="['/material', itemAcautelamento.item?.id, 'view']">{{ itemAcautelamento.item?.id }}</a>
+                    <div *ngIf="itemAcautelamento.material">
+                        <a [routerLink]="['/material', itemAcautelamento.material?.id, 'view']">{{ itemAcautelamento.material?.id }}</a>
                     </div>
                 </dd>
                 <dt><span jhiTranslate="ssinApp.itemAcautelamento.acautelamento">Acautelamento</span></dt>

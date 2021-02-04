@@ -32,7 +32,7 @@ export class ItemAcautelamentoUpdatePage {
   quantidadeInput = element(by.id('field_quantidade'));
   valorUnitarioInput = element(by.id('field_valorUnitario'));
 
-  itemSelect = element(by.id('field_item'));
+  materialSelect = element(by.id('field_material'));
   acautelamentoSelect = element(by.id('field_acautelamento'));
 
   async getPageTitle(): Promise<string> {
@@ -55,20 +55,20 @@ export class ItemAcautelamentoUpdatePage {
     return await this.valorUnitarioInput.getAttribute('value');
   }
 
-  async itemSelectLastOption(): Promise<void> {
-    await this.itemSelect.all(by.tagName('option')).last().click();
+  async materialSelectLastOption(): Promise<void> {
+    await this.materialSelect.all(by.tagName('option')).last().click();
   }
 
-  async itemSelectOption(option: string): Promise<void> {
-    await this.itemSelect.sendKeys(option);
+  async materialSelectOption(option: string): Promise<void> {
+    await this.materialSelect.sendKeys(option);
   }
 
-  getItemSelect(): ElementFinder {
-    return this.itemSelect;
+  getMaterialSelect(): ElementFinder {
+    return this.materialSelect;
   }
 
-  async getItemSelectedOption(): Promise<string> {
-    return await this.itemSelect.element(by.css('option:checked')).getText();
+  async getMaterialSelectedOption(): Promise<string> {
+    return await this.materialSelect.element(by.css('option:checked')).getText();
   }
 
   async acautelamentoSelectLastOption(): Promise<void> {

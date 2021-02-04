@@ -21,14 +21,14 @@ type SelectableEntity = IMaterial | IAcautelamento;
 })
 export class ItemAcautelamentoUpdateComponent implements OnInit {
   isSaving = false;
-  items: IMaterial[] = [];
+  materials: IMaterial[] = [];
   acautelamentos: IAcautelamento[] = [];
 
   editForm = this.fb.group({
     id: [],
     quantidade: [null, [Validators.required]],
     valorUnitario: [null, [Validators.required]],
-    item: [],
+    material: [],
     acautelamento: [],
   });
 
@@ -52,17 +52,17 @@ export class ItemAcautelamentoUpdateComponent implements OnInit {
           })
         )
         .subscribe((resBody: IMaterial[]) => {
-          if (!itemAcautelamento.item || !itemAcautelamento.item.id) {
-            this.items = resBody;
+          if (!itemAcautelamento.material || !itemAcautelamento.material.id) {
+            this.materials = resBody;
           } else {
             this.materialService
-              .find(itemAcautelamento.item.id)
+              .find(itemAcautelamento.material.id)
               .pipe(
                 map((subRes: HttpResponse<IMaterial>) => {
                   return subRes.body ? [subRes.body].concat(resBody) : resBody;
                 })
               )
-              .subscribe((concatRes: IMaterial[]) => (this.items = concatRes));
+              .subscribe((concatRes: IMaterial[]) => (this.materials = concatRes));
           }
         });
 
@@ -75,7 +75,7 @@ export class ItemAcautelamentoUpdateComponent implements OnInit {
       id: itemAcautelamento.id,
       quantidade: itemAcautelamento.quantidade,
       valorUnitario: itemAcautelamento.valorUnitario,
-      item: itemAcautelamento.item,
+      material: itemAcautelamento.material,
       acautelamento: itemAcautelamento.acautelamento,
     });
   }
@@ -100,7 +100,7 @@ export class ItemAcautelamentoUpdateComponent implements OnInit {
       id: this.editForm.get(['id'])!.value,
       quantidade: this.editForm.get(['quantidade'])!.value,
       valorUnitario: this.editForm.get(['valorUnitario'])!.value,
-      item: this.editForm.get(['item'])!.value,
+      material: this.editForm.get(['material'])!.value,
       acautelamento: this.editForm.get(['acautelamento'])!.value,
     };
   }

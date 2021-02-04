@@ -5,7 +5,7 @@ export interface IItemAcautelamento {
   id?: number;
   quantidade?: number;
   valorUnitario?: number;
-  item?: IMaterial;
+  material?: IMaterial;
   acautelamento?: IAcautelamento;
 }
 
@@ -14,7 +14,7 @@ export class ItemAcautelamento implements IItemAcautelamento {
     public id?: number,
     public quantidade?: number,
     public valorUnitario?: number,
-    public item?: IMaterial,
+    public material?: IMaterial,
     public acautelamento?: IAcautelamento
   ) {}
 }

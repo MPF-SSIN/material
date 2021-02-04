@@ -21,7 +21,7 @@
       "relationshipType": "one-to-one",
       "otherEntityName": "material",
       "otherEntityRelationshipName": "itemAcautelamento",
-      "relationshipName": "item",
+      "relationshipName": "material",
       "otherEntityField": "id",
       "ownerSide": true
     },
